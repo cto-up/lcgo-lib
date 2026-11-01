@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"ctoup.com/coreapp/pkg/shared/event"
+	"github.com/cto-up/core-lib/pkg/shared/event"
 	"github.com/cto-up/lcgo-lib/pkg/core/service"
 	gochains "github.com/cto-up/lcgo-lib/pkg/core/service/gochains"
 	"github.com/cto-up/lcgo-lib/pkg/shared/llmmodels"

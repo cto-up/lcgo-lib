@@ -32,8 +32,8 @@ and is consumed by an application that wires its handlers into a Gin server.
 
 ## Dependencies
 
-This module uses `ctoup.com/coreapp` (auth, multi-tenancy, request middleware, progress events, DB helpers)
-via a `replace` directive pointing at the sibling repo `../core-be-lib`. The frontend TypeScript client is
+This module uses `github.com/cto-up/core-lib` (auth, multi-tenancy, request middleware, progress events, DB helpers)
+via a `replace` directive pointing at the sibling repo `../core-lib`. The frontend TypeScript client is
 generated into `../lcgo-fe-lib`.
 
 ## Getting started

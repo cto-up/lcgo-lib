@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"ctoup.com/coreapp/pkg/shared/event"
-	"ctoup.com/coreapp/pkg/shared/util"
+	"github.com/cto-up/core-lib/pkg/shared/event"
+	"github.com/cto-up/core-lib/pkg/shared/util"
 	"github.com/cto-up/lcgo-lib/pkg/core/service/gochains"
 
 	"github.com/tmc/langchaingo/chains"

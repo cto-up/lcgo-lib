@@ -10,7 +10,7 @@ import (
 
 	standardlog "log"
 
-	connectionRepository "ctoup.com/coreapp/pkg/shared/repository"
+	connectionRepository "github.com/cto-up/core-lib/pkg/shared/repository"
 	"github.com/cto-up/lcgo-lib/internal/example"
 	_ "github.com/jackc/pgx/v5/stdlib"
 	"github.com/joho/godotenv"

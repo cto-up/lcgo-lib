@@ -17,9 +17,9 @@ server `main` in this repo** — `cmd/prompt` is a small CLI that exercises the 
 
 ## Before you start any task
 
-1. This module depends on `ctoup.com/coreapp` via a `replace` directive pointing at `../core-be-lib`.
+1. This module depends on `github.com/cto-up/core-lib` via a `replace` directive pointing at `../core-lib`.
    Auth, tenancy, request middleware, progress events (`event.ProgressEvent`), DB connection helpers, and
-   `util`/`helpers` all come from coreapp. If a change is needed there, edit it in `../core-be-lib`.
+   `util`/`helpers` all come from core-lib. If a change is needed there, edit it in `../core-lib`.
 2. The frontend TypeScript client is generated into the sibling repo `../lcgo-fe-lib` (see `make openapi`).
 3. Never modify the `vendor/` folder directly.
 
@@ -84,13 +84,13 @@ in this repo.
 - `pkg/shared/pgvector/` — custom langchaingo `vectorstores.VectorStore` for Postgres + pgvector, filtering similarity search by `tenant_id`, ACL `roles`, and `tags`
 - `internal/example/` — sample chains (`GenerateSimpleAnswer`, `GenerateSkillsAnalysis`) used by `cmd/prompt`
 
-### Provided by coreapp (`../core-be-lib`, imported — not defined here)
+### Provided by core-lib (`../core-lib`, imported — not defined here)
 
 - `pkg/shared/auth` — auth provider + context keys (`auth.AUTH_TENANT_ID_KEY`, `auth.AUTH_USER_ID`, …) and role helpers (`auth.IsAdmin`, `auth.IsSuperAdmin`, `auth.IsCustomerAdmin`)
 - `pkg/shared/event` — `ProgressEvent` used for streaming
 - request/tenant/auth middleware, `helpers` (paging, error responses), `util`, and the Postgres connector
 
-Role hierarchy (defined in coreapp): `SUPER_ADMIN` (global) > `CUSTOMER_ADMIN` (tenant) > `ADMIN` (tenant) > `USER` (tenant).
+Role hierarchy (defined in core-lib): `SUPER_ADMIN` (global) > `CUSTOMER_ADMIN` (tenant) > `ADMIN` (tenant) > `USER` (tenant).
 
 ## Development Conventions
 
@@ -119,6 +119,6 @@ Role hierarchy (defined in coreapp): `SUPER_ADMIN` (global) > `CUSTOMER_ADMIN` (
 
 ## Repository Layout Note
 
-For full-stack code generation, this repo (`lcgo-be-lib`), the coreapp backend (`core-be-lib`), and the
+For full-stack code generation, this repo (`lcgo-be-lib`), the core-lib backend (`core-lib`), and the
 frontend (`lcgo-fe-lib`) should be sibling directories under the same parent. `make openapi` writes the
 generated TypeScript axios client to `../lcgo-fe-lib/lib/openapi/core`.
